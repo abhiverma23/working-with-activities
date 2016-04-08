@@ -1,42 +1,35 @@
 package com.etechclub.working_with_activities;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
+import android.widget.Toast;
 
 // STOPSHIP: 08-Apr-16
 /*
  * Created by Dont Know on 08-Apr-16.
  */
-public class Menu extends Activity{
+public class Menu extends Activity {
+
+    String classes[] = { "Menu", "SubActivity1", "SubActivity2",
+            "SubActivity3", "SubActivity4", "SubActivity5"};
+    ListView lv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu);
 
-        Thread timer = new Thread(){
-            @Override
-            public void run() {
-                super.run();
-                try {
-                    sleep(5000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }finally {
-                    Intent intent= new Intent("com.etechclub.working_with_activities.SUBACTIVITY1");
-                    startActivity(intent);
-                }
-            }
-        };
-        timer.start();
-    }
+        lv = (ListView) findViewById(R.id.lv);
 
-    @Override
-    protected void onPause() {
-        super.onPause();
-        // TODO Add any thing like for stoping the song you can use 'RELEASE()' method...
-        // Make confirm that you stop any fishy thing....
-        finish();
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(getBaseContext(), "" + position ,
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }

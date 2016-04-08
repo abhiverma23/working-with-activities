@@ -6,9 +6,19 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome To The App"
         android:layout_gravity="center"
+        android:text="Select Activity"
         android:textSize="24dp"
         android:textColor="@color/colorPrimary"
         android:shadowColor="@color/colorAccent"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lv"
+        android:entries="@array/list"
+        android:textColor="@color/colorPrimaryDark"
+        android:background="#FFFFFF"/>
+
+
 </LinearLayout>

@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Working_With_Activities</string>
+    <array name="list">
+        <item>This Menu</item>
+        <item>Sub Menu 1</item>
+        <item>Sub Menu 2</item>
+        <item>Sub Menu 3</item>
+        <item>Sub Menu 4</item>
+        <item>Sub Menu 5</item>
+    </array>
 </resources>
