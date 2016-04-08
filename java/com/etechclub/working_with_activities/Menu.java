@@ -14,7 +14,7 @@ import android.widget.Toast;
  */
 public class Menu extends Activity {
 
-    String classes[] = { "MENU", "SUBACTIVITY1", "SUBACTIVITY2",
+    String classes[] = { "SUBACTIVITY1", "SUBACTIVITY2",
             "SUBACTIVITY3", "SUBACTIVITY4", "SUBACTIVITY5"};
     ListView lv;
 
@@ -28,13 +28,12 @@ public class Menu extends Activity {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getBaseContext(), "" + classes[position] ,
+                Toast.makeText(getBaseContext(), "" + lv.getItemAtPosition(position) ,
                         Toast.LENGTH_SHORT).show();
 
-                Intent intent;
-                intent = position==0 ?
-                        new Intent("android.intent.action.MAIN") :
-                        new Intent("com.etechclub.working_with_activities." + classes[position]);
+                Intent intent =
+                        new Intent("com.etechclub.working_with_activities." +
+                                classes[position] );
                 startActivity(intent);
             }
         });
