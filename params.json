@@ -1,0 +1,6 @@
+{
+  "name": "Working With Activites",
+  "tagline": "A simple example of code to switch between activities. Using ListView and ArrayAdapter with less confusing statements in code.",
+  "body": "# Working with activities\r\nAndroid Activities switching using ListView and ArrayAdapters (Creating List using String.xml and Using Simple Array Adapters)\r\n\r\n# Level Of Programming Skills\r\nBeginner\r\n\r\n# Contains\r\n5 Demo Activities, 1 Menu Activity\r\n\r\n# Menu Activity Contains\r\nA TextView and a ListView (with some colours)\r\n\r\n# What it does?\r\nOn clicking any item in list it opens the respective Activity\r\n\r\n# Special\r\nQuite easy then others example…. When you want to use ArrayAdapters.\r\n\r\n# Coming Soon\r\nComments with each statements so you can understand each required statement easily.\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
