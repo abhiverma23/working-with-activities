@@ -1,6 +1,7 @@
 package com.etechclub.working_with_activities;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -13,8 +14,8 @@ import android.widget.Toast;
  */
 public class Menu extends Activity {
 
-    String classes[] = { "Menu", "SubActivity1", "SubActivity2",
-            "SubActivity3", "SubActivity4", "SubActivity5"};
+    String classes[] = { "MENU", "SUBACTIVITY1", "SUBACTIVITY2",
+            "SUBACTIVITY3", "SUBACTIVITY4", "SUBACTIVITY5"};
     ListView lv;
 
     @Override
@@ -27,8 +28,14 @@ public class Menu extends Activity {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getBaseContext(), "" + position ,
+                Toast.makeText(getBaseContext(), "" + classes[position] ,
                         Toast.LENGTH_SHORT).show();
+
+                Intent intent;
+                intent = position==0 ?
+                        new Intent("android.intent.action.MAIN") :
+                        new Intent("com.etechclub.working_with_activities." + classes[position]);
+                startActivity(intent);
             }
         });
     }
