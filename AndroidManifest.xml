@@ -18,9 +18,9 @@
         </activity>
         <activity android:name=".SubActivity1">
             <intent-filter>
-                <action android:name="android.intent.action.SUBACTIVITY1" />
+                <action android:name="com.etechclub.working_with_activities.SUBACTIVITY1" />
 
-                <category android:name="com.etechclub.working_with_activities.DEFAULT" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
     </application>

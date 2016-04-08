@@ -23,12 +23,20 @@ public class Menu extends Activity{
                     sleep(5000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
+                }finally {
+                    Intent intent= new Intent("com.etechclub.working_with_activities.SUBACTIVITY1");
+                    startActivity(intent);
                 }
             }
         };
         timer.start();
-        Intent intent= new Intent("com.etechclub.working_with_activities.SUBACTIVITY");
-        startActivity(intent);
+    }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        // TODO Add any thing like for stoping the song you can use 'RELEASE()' method...
+        // Make confirm that you stop any fishy thing....
+        finish();
     }
 }
